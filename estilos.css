@@ -1,393 +1,169 @@
-/* =====================================================
-   TALLER 22 - estilos propios (se carga DESPUES de Bootstrap)
-   Paleta (solo tres colores):
-     papel   #EDE6D6
-     tinta   #111111
-     naranja #FF4A00
-   Mobile first: lo base es celular, las media queries agrandan.
-   ===================================================== */
+/* colores: beige #EDE6D6, negro #111111, naranja #FF4A00 */
 
-/* ---------- BASE ---------- */
 body {
   background-color: #EDE6D6;
   color: #111111;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
 }
-h1, h2, h3, .marca, .artista, .precio, .sello-22 {
-  font-family: Impact, "Arial Narrow", Arial, sans-serif;
-  font-weight: normal;
+
+h1, h2, h3 {
+  font-family: Impact, Arial, sans-serif;
   text-transform: uppercase;
 }
-.dato, .genero, .sala, .hora, .cupos, .boleto-cabecera, .btn, .cantidad {
-  font-family: "Courier New", Courier, monospace;
-}
-a { color: #111111; }
 
-/* ---------- BARRA DE NAVEGACION ---------- */
+/* navbar */
 .barra {
   background-color: #EDE6D6;
   border-bottom: 3px solid #111111;
 }
 .marca {
-  font-size: 1.8rem;
-  text-decoration: none;
+  font-family: Impact, Arial, sans-serif;
+  font-size: 1.5rem;
 }
 .barra .nav-link {
   color: #111111;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 0.8rem;
   font-weight: bold;
-  text-transform: uppercase;
-  padding: 0.5rem;
 }
 .barra .nav-link:hover {
-  background-color: #111111;
-  color: #EDE6D6;
+  color: #FF4A00;
 }
-.barra .enlace-entradas { background-color: #FF4A00; }
 
-/* ---------- BOTONES ---------- */
-.boton-principal {
+/* botones */
+.boton {
   background-color: #FF4A00;
   color: #111111;
-  border: 3px solid #111111;
+  border: 2px solid #111111;
   border-radius: 0;
   font-weight: bold;
-  text-transform: uppercase;
-  padding: 0.8rem 1.5rem;
 }
-/* Al pasar el mouse: fondo tinta con franjas que se mueven (animacion "correr") */
-.boton-principal:hover {
+.boton:hover {
   background-color: #111111;
-  color: #EDE6D6;
-  border: 3px solid #111111;
-  background-image: linear-gradient(135deg, rgba(237,230,214,0.18) 25%, transparent 25%, transparent 50%, rgba(237,230,214,0.18) 50%, rgba(237,230,214,0.18) 75%, transparent 75%);
-  background-size: 16px 16px;
-  animation: correr 0.6s linear infinite;
+  color: #FF4A00;
 }
 .boton-borde {
-  background-color: transparent;
-  color: #111111;
-  border: 3px solid #111111;
+  border: 2px solid #111111;
   border-radius: 0;
   font-weight: bold;
-  text-transform: uppercase;
-  padding: 0.8rem 1.5rem;
 }
 .boton-borde:hover {
   background-color: #111111;
   color: #EDE6D6;
-  border: 3px solid #111111;
 }
 
-/* ---------- HERO ---------- */
+/* portada */
 .hero {
-  padding-top: 1.5rem;
-  padding-bottom: 3rem;
-  /* Trama de puntos tipo impresion, muy suave */
-  background-image: radial-gradient(circle, rgba(17, 17, 17, 0.14) 1px, transparent 1.6px);
-  background-size: 10px 10px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
-.dato {
-  margin-bottom: 1rem;
-  font-size: 0.85rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-top: 3px solid #111111;
-  border-bottom: 1px solid #111111;
-}
-.dato p {
-  display: block;
-  margin: 0;
-  padding: 0.4rem 0;
-  border-bottom: 1px solid #111111;
-}
-.dato p:last-child { border-bottom: none; }
-
-.titulo {
+.hero h1 {
   font-size: 5rem;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 10px;
 }
-.titulo h1 {
-  font-size: inherit;
-  margin: 0;
-}
-/* El 22 va como sello: naranja sobre tinta (contraste 5.6:1) y corrido a la derecha */
-.titulo .sello-22 {
-  display: inline-block;
-  font-size: inherit;
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: #111111;
+.fecha {
+  font-weight: bold;
   color: #FF4A00;
-  padding: 0 1rem;
-  margin-left: 1.5rem;
 }
 .bajada {
-  font-size: 1.15rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
-
-/* Imagen destacada con marco de tinta y leyenda debajo */
-.visual-hero {
+.foto {
   border: 3px solid #111111;
-  background-color: #111111;
-}
-.visual-hero img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.visual-hero p {
-  margin: 0;
-  padding: 0.3rem 0.7rem;
-  background-color: #111111;
-  color: #EDE6D6;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 0.8rem;
+  margin-top: 20px;
 }
 
-/* ---------- CINTA ANIMADA (marca la zona de compra) ---------- */
-.cinta {
-  height: 1.5rem;
-  background-image: linear-gradient(135deg, #111111 25%, #FF4A00 25%, #FF4A00 50%, #111111 50%, #111111 75%, #FF4A00 75%);
-  background-size: 16px 16px;
-  animation: correr 1.2s linear infinite;
-}
-
-/* ---------- SECCIONES ---------- */
+/* secciones */
 .seccion {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .seccion h2 {
-  font-size: 2.8rem;
-  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-/* Seccion informativa: tres rasgos con regla gruesa arriba */
-.rasgos {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-.rasgos li {
-  border-top: 6px solid #111111;
-  padding-top: 0.8rem;
-  padding-bottom: 1.5rem;
-}
-.rasgos li:first-child { border-top: 6px solid #FF4A00; }
-.rasgos h3 {
-  font-size: 1.8rem;
-  margin-bottom: 0.4rem;
-}
-.rasgos p { margin: 0; }
-
-/* ---------- LINE-UP (grilla de horarios) ---------- */
-.lineup-seccion {
-  background-color: #111111;
-  color: #EDE6D6;
-}
+/* line-up */
 .lineup {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  background-color: #111111;
+  color: #EDE6D6;
 }
-.lineup li {
-  padding: 0.9rem 0.75rem;
-  border-bottom: 1px solid #EDE6D6;
-}
-.lineup li:first-child { border-top: 3px solid #FF4A00; }
-.lineup li:last-child { border-bottom: 3px solid #FF4A00; }
-.lineup li:hover {
-  background-color: #FF4A00;
-  color: #111111;
-}
-.lineup p { margin: 0; }
-.lineup .hora {
-  display: block;
-  color: #FF4A00;
+.tabla {
+  --bs-table-bg: #111111;
+  --bs-table-color: #EDE6D6;
   font-size: 1.1rem;
-  font-weight: bold;
 }
-.lineup li:hover .hora { color: #111111; }
-.lineup .artista {
-  display: block;
-  font-size: 2.2rem;
+.tabla th {
+  color: #FF4A00;
 }
-.lineup .genero, .lineup .sala {
-  display: inline-block;
-  margin-right: 1rem;
-  font-size: 0.85rem;
-  text-transform: uppercase;
+.tabla tbody tr:hover td {
+  color: #FF4A00;
 }
 
-/* ---------- INFO PRACTICA (cards de Bootstrap, sin redondeo) ---------- */
-.card.sello {
+/* info */
+.tarjeta {
   height: 100%;
   background-color: #EDE6D6;
-  color: #111111;
-  border: 3px solid #111111;
-  border-radius: 0;
-}
-.card.sello-naranja { background-color: #FF4A00; }
-.card.sello-tinta {
-  background-color: #111111;
-  color: #EDE6D6;
-}
-.sello .card-title {
-  font-family: Impact, "Arial Narrow", Arial, sans-serif;
-  font-weight: normal;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-}
-.sello .card-text { margin: 0; }
-
-/* ---------- ENTRADAS ---------- */
-.entradas { background-color: #FF4A00; }
-.boleto {
-  height: 100%;
-  background-color: #EDE6D6;
-  color: #111111;
-  border: 3px solid #111111;
-}
-.boleto-vip {
-  background-color: #111111;
-  color: #EDE6D6;
-}
-.boleto-cabecera p { margin: 0; }
-.boleto-cabecera {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.7rem 1rem;
-  font-size: 0.85rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-/* Linea de troquel: gradient con corte duro repetido */
-.perforado {
-  height: 3px;
-  background-image: linear-gradient(to right, #111111 50%, transparent 50%);
-  background-size: 14px 3px;
-  background-repeat: repeat-x;
-}
-.boleto-vip .perforado {
-  background-image: linear-gradient(to right, #EDE6D6 50%, transparent 50%);
-}
-.boleto-cuerpo { padding: 1rem; }
-.cantidad {
-  margin-bottom: 0.3rem;
-  font-size: 0.85rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.boleto h3 {
-  font-size: 2rem;
-  margin: 0;
-}
-.precio {
-  font-size: 3.2rem;
-  margin: 0.3rem 0 0.8rem 0;
-}
-.boleto ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-.boleto li {
-  border-top: 1px solid #111111;
-  padding: 0.5rem 0;
-}
-.boleto-vip li { border-top: 1px solid #EDE6D6; }
-.boleto form { padding: 0 1rem 1rem 1rem; }
-.boleto .form-select {
   border: 2px solid #111111;
   border-radius: 0;
-  background-color: #EDE6D6;
-  color: #111111;
-}
-.boleto-vip .boton-principal { border: 3px solid #EDE6D6; }
-.boleto-vip .boton-principal:hover { border: 3px solid #EDE6D6; }
-.cupos {
-  background-color: #111111;
-  color: #EDE6D6;
-  border-radius: 0;
-  font-size: 0.8rem;
-  animation: parpadeo 1.2s ease-in-out infinite alternate;
 }
 
-/* ---------- FOOTER ---------- */
+/* entradas */
+.entradas {
+  background-color: #FF4A00;
+}
+.entrada {
+  border: 3px solid #111111;
+  border-radius: 0;
+  background-color: #EDE6D6;
+}
+.vip {
+  background-color: #111111;
+  color: #EDE6D6;
+}
+.vip .boton {
+  border-color: #EDE6D6;
+}
+.precio {
+  font-family: Impact, Arial, sans-serif;
+  font-size: 3rem;
+}
+.quedan {
+  background-color: #111111;
+  font-size: 0.8rem;
+  animation: titilar 1s infinite alternate;
+}
+
+@keyframes titilar {
+  from { opacity: 1; }
+  to { opacity: 0.3; }
+}
+
+/* footer */
 .pie {
   background-color: #111111;
   color: #EDE6D6;
-  border-top: 6px solid #FF4A00;
-  padding-top: 2.5rem;
-  padding-bottom: 2rem;
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
 .pie h2 {
-  font-family: Impact, "Arial Narrow", Arial, sans-serif;
-  font-weight: normal;
-  font-size: 1.4rem;
-  text-transform: uppercase;
   color: #FF4A00;
-}
-.pie a { color: #EDE6D6; }
-.pie a:hover { color: #FF4A00; }
-.pie a[href^="#"] { text-decoration: none; }
-.pie ul {
-  list-style-type: none;
-  padding: 0;
+  font-size: 1.5rem;
 }
 
-/* ---------- ANIMACIONES ---------- */
-/* Desplaza las franjas un tamano de mosaico: el loop no se corta */
-@keyframes correr {
-  from { background-position: 0 0; }
-  to   { background-position: 16px 0; }
-}
-/* Avisa que quedan pocos cupos */
-@keyframes parpadeo {
-  from { opacity: 1; }
-  to   { opacity: 0.35; }
-}
-
-/* =====================================================
-   MEDIA QUERIES
-   ===================================================== */
-
-/* Tablet: el titulo y la grilla de line-up pasan a escala mayor */
-@media (min-width: 768px) {
-  .titulo { font-size: 8rem; }
-  .titulo .sello-22 { margin-left: 3rem; }
-  .seccion { padding-top: 4.5rem; padding-bottom: 4.5rem; }
-  .seccion h2 { font-size: 4rem; }
-  .dato p {
-    display: inline-block;
-    border-bottom: none;
-    padding-right: 2rem;
+/* celular */
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 3.5rem;
   }
-  /* Cada fila del line-up pasa de apilada a 4 columnas alineadas */
-  .lineup li {
-    display: grid;
-    grid-template-columns: 6rem 1fr 15rem 6rem;
-    gap: 1rem;
-    align-items: center;
+  .barra .nav-link {
+    font-size: 0.8rem;
+    padding: 5px;
   }
-  .lineup .artista { font-size: 2.6rem; }
-  .lineup .genero, .lineup .sala { margin-right: 0; }
 }
 
-/* Escritorio: titulo gigante y mas aire */
+/* compu */
 @media (min-width: 992px) {
-  .titulo { font-size: 11rem; }
-  .precio { font-size: 3.8rem; }
-}
-
-/* Pantallas muy chicas: la barra necesita menos relleno para no romperse */
-@media (max-width: 360px) {
-  .barra .nav-link { padding: 0.5rem 0.3rem; font-size: 0.72rem; }
-  .titulo { font-size: 4.2rem; }
+  .hero h1 {
+    font-size: 8rem;
+  }
 }
